@@ -7,6 +7,9 @@ from github_api.github_client import comment_issue
 SIMILARITY_THRESHOLD = 0.5
 TOP_K = 3
 
+# New feature: automatic PR comment for related issues
+def auto_comment_related_issues(pr_text):
+    print("Analyzing PR text for related issues...")
 
 def handle_pr(payload):
 
