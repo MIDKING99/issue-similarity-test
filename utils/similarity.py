@@ -18,4 +18,7 @@ def cosine_similarity(vecA, vecB):
 
     similarity = dot_product / (normA * normB)
 
+    # ⭐ 新增：短文本惩罚机制（用于优化相似度）
+    if text_length is not None and text_length < 20:
+        similarity *= 0.85
     return similarity
